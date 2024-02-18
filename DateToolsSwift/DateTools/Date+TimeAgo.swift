@@ -164,7 +164,7 @@ public extension Date {
         
         let components = calendar.dateComponents(unitFlags, from: earliest, to: latest)
         let yesterday = date.subtract(1.days)
-        let isYesterday = yesterday.day == self.day
+        //let isYesterday = yesterday.day == self.day
         
         
         if (components.year! >= 1) {
@@ -176,12 +176,12 @@ public extension Date {
         else if (components.weekOfYear! >= 1) {
             return self.logicalLocalizedStringFromFormat(format: "%%d%@w", value: components.weekOfYear!)
         }
-        else if (components.day! >= 2) {
+        else if (components.day! >= 1) {
             return self.logicalLocalizedStringFromFormat(format: "%%d%@d", value: components.day!)
         }
-        else if (isYesterday) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d%@d", value: 1)
-        }
+//        else if (isYesterday) {
+//            return self.logicalLocalizedStringFromFormat(format: "%%d%@d", value: 1)
+//        }
         else if (components.hour! >= 1) {
             return self.logicalLocalizedStringFromFormat(format: "%%d%@h", value: components.hour!)
         }
