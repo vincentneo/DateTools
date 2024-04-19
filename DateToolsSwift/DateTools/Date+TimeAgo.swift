@@ -170,9 +170,9 @@ public extension Date {
         if (components.year! >= 1) {
             return self.logicalLocalizedStringFromFormat(format: "%%d%@y", value: components.year!)
         }
-        else if (components.month! >= 1) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d%@M", value: components.month!)
-        }
+//        else if (components.month! >= 1) {
+//            return self.logicalLocalizedStringFromFormat(format: "%%d%@M", value: components.month!)
+//        }
         else if (components.weekOfYear! >= 1) {
             return self.logicalLocalizedStringFromFormat(format: "%%d%@w", value: components.weekOfYear!)
         }
