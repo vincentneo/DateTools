@@ -157,7 +157,7 @@ public extension Date {
     
     func shortTimeAgo(since date:Date) -> String {
         let calendar = NSCalendar.current
-        let unitFlags = Set<Calendar.Component>([.second,.minute,.hour,.day,.weekOfYear,.month,.year])
+        let unitFlags = Set<Calendar.Component>([.second,.minute,.hour,.day,.weekOfYear,.year])
         let earliest = self.earlierDate(date)
         let latest = (earliest == self) ? date : self //Should pbe triple equals, but not extended to Date at this time
         
